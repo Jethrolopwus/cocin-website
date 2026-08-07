@@ -12,6 +12,7 @@ import {
   X,
 } from "lucide-react";
 import FindChurchModal from "./FindChurchModal";
+import GiveModal from "./GiveModal";
 
 type DropdownItem = {
   label: string;
@@ -87,6 +88,48 @@ const dropdownData: Record<string, DropdownItem[]> = {
       label: "Music & Worship",
       description: "Choral networks, brass bands and congregational praise",
       href: "/ministries",
+    },
+  ],
+  Departments: [
+    {
+      label: "Investment",
+      description: "Strategic investment portfolio and enterprise management",
+      href: "/departments/investment",
+    },
+    {
+      label: "Evangelism and Mission",
+      description: "Outreach campaigns and gospel proclamation initiatives",
+      href: "/departments/evangelism-and-mission",
+    },
+    {
+      label: "Finance",
+      description: "Transparent stewardship and financial resource management",
+      href: "/departments/finance",
+    },
+    {
+      label: "Internal Audit",
+      description: "Accountability, compliance and internal control oversight",
+      href: "/departments/internal-audit",
+    },
+    {
+      label: "Education",
+      description: "Schools, seminaries and academic institutional oversight",
+      href: "/departments/education",
+    },
+    {
+      label: "Personnel",
+      description: "Human resource management and staff administration",
+      href: "/departments/personnel",
+    },
+    {
+      label: "Church Growth",
+      description: "Strategic planning for congregational expansion and planting",
+      href: "/departments/church-growth",
+    },
+    {
+      label: "ICT",
+      description: "Digital infrastructure, technology and communications",
+      href: "/departments/ict",
     },
   ],
   Resources: [
@@ -181,6 +224,7 @@ const navItems = [
   { label: "Home", href: "/", hasDropdown: false },
   { label: "About", href: "/about", hasDropdown: true },
   { label: "Ministries", href: "/ministries", hasDropdown: true },
+  { label: "Departments", href: "/departments/finance", hasDropdown: true },
   { label: "Resources", href: "/resources", hasDropdown: true },
   { label: "Events", href: "/events", hasDropdown: true },
   { label: "News", href: "/news", hasDropdown: true },
@@ -194,6 +238,7 @@ export default function Header() {
     null
   );
   const [findChurchOpen, setFindChurchOpen] = useState(false);
+  const [giveModalOpen, setGiveModalOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
 
   // Close dropdown on outside click
@@ -410,12 +455,12 @@ export default function Header() {
 
               {/* Give Button */}
               <div className="hidden md:flex items-center">
-                <Link
-                  href="/give"
+                <button
+                  onClick={() => setGiveModalOpen(true)}
                   className="bg-[#2563EB] hover:bg-[#1d4ed8] text-white text-sm font-semibold px-6 py-2 rounded-full transition-colors"
                 >
                   Give
-                </Link>
+                </button>
               </div>
 
               {/* Mobile Menu Button */}
@@ -500,12 +545,12 @@ export default function Header() {
                   )
                 )}
                 <div className="pt-3 px-3">
-                  <Link
-                    href="/give"
-                    className="block text-center bg-[#2563EB] hover:bg-[#1d4ed8] text-white text-sm font-semibold px-6 py-2.5 rounded-full transition-colors"
+                  <button
+                    onClick={() => { setGiveModalOpen(true); setMobileMenuOpen(false); }}
+                    className="block w-full text-center bg-[#2563EB] hover:bg-[#1d4ed8] text-white text-sm font-semibold px-6 py-2.5 rounded-full transition-colors"
                   >
                     Give
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
@@ -517,6 +562,12 @@ export default function Header() {
       <FindChurchModal
         isOpen={findChurchOpen}
         onClose={() => setFindChurchOpen(false)}
+      />
+
+      {/* Give Modal */}
+      <GiveModal
+        isOpen={giveModalOpen}
+        onClose={() => setGiveModalOpen(false)}
       />
     </>
   );
