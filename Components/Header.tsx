@@ -268,20 +268,20 @@ export default function Header() {
         <div className="bg-[#1a1a2e] text-gray-300 text-xs">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-8">
             {/* Left: Phone & Email */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               <a
                 href="tel:+2347002624667"
                 className="flex items-center gap-1.5 hover:text-white transition-colors"
               >
-                <Phone size={12} />
-                <span>+234 700 262 4667</span>
+                <Phone size={12} className="flex-shrink-0" />
+                <span className="hidden sm:inline">+234 700 262 4667</span>
               </a>
               <a
                 href="mailto:headquarters@cocin.org"
                 className="flex items-center gap-1.5 hover:text-white transition-colors"
               >
-                <Mail size={12} />
-                <span>headquarters@cocin.org</span>
+                <Mail size={12} className="flex-shrink-0" />
+                <span className="hidden sm:inline">headquarters@cocin.org</span>
               </a>
             </div>
 
