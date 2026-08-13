@@ -6,14 +6,14 @@ import { MapPin, Play } from "lucide-react";
 import FindChurchModal from "./FindChurchModal";
 
 const carouselImages = [
-  { src: "/Frame-2.png", alt: "COCIN Community 1" },
-  { src: "/Frame-4.png", alt: "COCIN Community 2" },
+  { src: "/President.png", alt: "COCIN President" },
+  { src: "/GS.png", alt: "COCIN General Secretary" },
   { src: "/DP.png", alt: "COCIN Leadership" },
   { src: "/Frame-5.png", alt: "COCIN Community 3" },
   { src: "/DDP.png", alt: "COCIN Deputy Director" },
-  { src: "/Frame-6.png", alt: "COCIN Community 4" },
+  { src: "/Sylvester_Dachomo.png", alt: "Sylvester Dachomo" },
   { src: "/DF.png", alt: "COCIN Director of Finance" },
-  { src: "/Frame-8.png", alt: "COCIN Community 5" },
+  { src: "/VP.png", alt: "COCIN Vice President" },
 ];
 
 const SLIDE_INTERVAL = 4000; // ms
@@ -40,7 +40,7 @@ export default function HeroSection() {
     <>
       <section className="w-full">
         {/* Background Carousel Hero */}
-        <div className="relative w-full h-[55vh] min-h-[420px] lg:h-[75vh] lg:min-h-[600px] overflow-hidden">
+        <div className="relative w-full h-[55vh] min-h-[420px] lg:h-[75vh] lg:min-h-[700px] overflow-hidden">
           {/* Slide images — all stacked, only the active one is visible */}
           {carouselImages.map((image, index) => (
             <div
@@ -49,12 +49,13 @@ export default function HeroSection() {
                 index === current ? "opacity-100" : "opacity-0"
               }`}
             >
+              {/* Mobile: object-cover cropped to top; Desktop: object-contain to show full portrait */}
               <Image
                 src={image.src}
                 alt={image.alt}
                 fill
                 priority={index === 0}
-                className="object-cover object-[center_18%]"
+                className="object-cover object-[center_22%] lg:object-cover"
                 sizes="100vw"
               />
             </div>
