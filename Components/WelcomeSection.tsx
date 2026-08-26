@@ -11,7 +11,7 @@ export default function WelcomeSection() {
             <div className="relative md:w-[380px] flex-shrink-0">
               <div className="relative w-full h-80 md:h-full">
                 <Image
-                  src="/(Rev. Dr. Amos Mohzo — President, COCIN).png"
+                  src="/President.png"
                   alt="Rev. Dr. Amos Mohzo — President, Church of Christ in Nations"
                   fill
                   className="object-cover"
