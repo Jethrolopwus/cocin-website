@@ -240,16 +240,22 @@ export default function Header() {
   const [findChurchOpen, setFindChurchOpen] = useState(false);
   const [giveModalOpen, setGiveModalOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Close dropdown on outside click
+  const openMenu = (label: string) => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setOpenDropdown(label);
+  };
+
+  const closeMenu = () => {
+    closeTimer.current = setTimeout(() => setOpenDropdown(null), 120);
+  };
+
+  // Clean up timer on unmount
   useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (navRef.current && !navRef.current.contains(event.target as Node)) {
-        setOpenDropdown(null);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    return () => {
+      if (closeTimer.current) clearTimeout(closeTimer.current);
+    };
   }, []);
 
   const handleDropdownItemClick = (item: DropdownItem) => {
@@ -362,11 +368,8 @@ export default function Header() {
                   item.hasDropdown ? (
                     <div key={item.label} className="relative">
                       <button
-                        onClick={() =>
-                          setOpenDropdown(
-                            openDropdown === item.label ? null : item.label
-                          )
-                        }
+                        onMouseEnter={() => openMenu(item.label)}
+                        onMouseLeave={closeMenu}
                         className="flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors text-gray-300 hover:text-white"
                       >
                         {item.label}
@@ -381,7 +384,11 @@ export default function Header() {
                       {/* Dropdown Panel */}
                       {openDropdown === item.label &&
                         dropdownData[item.label] && (
-                          <div className="absolute top-full left-0 mt-1 w-[280px] bg-white rounded-xl shadow-xl border border-gray-200 py-2 z-50">
+                          <div
+                            onMouseEnter={() => openMenu(item.label)}
+                            onMouseLeave={closeMenu}
+                            className="absolute top-full left-0 mt-1 w-[280px] bg-white rounded-xl shadow-xl border border-gray-200 py-2 z-50"
+                          >
                             {dropdownData[item.label].map(
                               (dropItem, idx) => {
                                 const isLast =
@@ -459,7 +466,7 @@ export default function Header() {
                   onClick={() => setGiveModalOpen(true)}
                   className="bg-[#2563EB] hover:bg-[#1d4ed8] text-white text-sm font-semibold px-6 py-2 rounded-full transition-colors"
                 >
-                  Give
+                  Donate
                 </button>
               </div>
 
@@ -549,7 +556,7 @@ export default function Header() {
                     onClick={() => { setGiveModalOpen(true); setMobileMenuOpen(false); }}
                     className="block w-full text-center bg-[#2563EB] hover:bg-[#1d4ed8] text-white text-sm font-semibold px-6 py-2.5 rounded-full transition-colors"
                   >
-                    Give
+                    Donate
                   </button>
                 </div>
               </div>

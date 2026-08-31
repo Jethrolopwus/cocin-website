@@ -1,4 +1,8 @@
+"use client";
+
+import { useState } from "react";
 import { Heart, Globe, Building2 } from "lucide-react";
+import GiveModal from "./GiveModal";
 
 const supportItems = [
   {
@@ -22,6 +26,8 @@ const supportItems = [
 ];
 
 export default function SupportMissionSection() {
+  const [isGiveModalOpen, setIsGiveModalOpen] = useState(false);
+
   return (
     <section className="w-full bg-[#1F2937] py-16 sm:py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,7 +50,9 @@ export default function SupportMissionSection() {
 
             {/* CTA Buttons */}
             <div className="flex items-center gap-3">
-              <button className="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#1d4ed8] text-white font-semibold px-6 py-3 rounded-full transition-colors text-sm">
+              <button
+                onClick={() => setIsGiveModalOpen(true)}
+                className="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#1d4ed8] text-white font-semibold px-6 py-3 rounded-full transition-colors text-sm">
                 <Heart size={16} />
                 Give Now
               </button>
@@ -77,6 +85,8 @@ export default function SupportMissionSection() {
           </div>
         </div>
       </div>
+
+      <GiveModal isOpen={isGiveModalOpen} onClose={() => setIsGiveModalOpen(false)} />
     </section>
   );
 }
