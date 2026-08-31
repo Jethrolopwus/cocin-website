@@ -373,30 +373,6 @@ export default function ICTDepartmentPage() {
                 </div>
               </div>
 
-              {/* Deputy Director Card */}
-              <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-                <div className="relative w-full" style={{ height: 280 }}>
-                  <Image
-                    src="/DDP.png"
-                    alt="Deputy Director of ICT"
-                    fill
-                    className="object-cover object-top"
-                    sizes="(max-width: 1024px) 100vw, 350px"
-                  />
-                </div>
-                <div className="p-6">
-                  <span className="text-[#2563EB] font-semibold text-xs tracking-widest uppercase block mb-1">
-                    Deputy Director
-                  </span>
-                  <h3 className="text-lg font-bold text-gray-900 mb-1">
-                    Deputy Director of ICT
-                  </h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">
-                    Supporting the Director in coordinating all ICT units and
-                    overseeing daily operations.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
