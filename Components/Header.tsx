@@ -146,7 +146,7 @@ const dropdownData: Record<string, DropdownItem[]> = {
     {
       label: "Publications",
       description: "The Light Newspaper and quarterly theological journals",
-      href: "/resources",
+      href: "https://lightbearernews.com/",
     },
     {
       label: "Bible Study",
@@ -418,6 +418,32 @@ export default function Header() {
                                   );
                                 }
 
+                                if (dropItem.href.startsWith("http")) {
+                                  return (
+                                    <a
+                                      key={dropItem.label}
+                                      href={dropItem.href}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      onClick={() =>
+                                        handleDropdownItemClick(dropItem)
+                                      }
+                                      className={`block px-5 py-3 hover:bg-gray-50 transition-colors ${
+                                        !isLast
+                                          ? "border-b border-gray-100"
+                                          : ""
+                                      }`}
+                                    >
+                                      <div className="text-sm font-semibold text-gray-900">
+                                        {dropItem.label}
+                                      </div>
+                                      <div className="text-xs text-gray-500 mt-0.5 leading-relaxed">
+                                        {dropItem.description}
+                                      </div>
+                                    </a>
+                                  );
+                                }
+
                                 return (
                                   <Link
                                     key={dropItem.label}
@@ -522,6 +548,22 @@ export default function Header() {
                                 >
                                   {dropItem.label}
                                 </button>
+                              );
+                            }
+                            if (dropItem.href.startsWith("http")) {
+                              return (
+                                <a
+                                  key={dropItem.label}
+                                  href={dropItem.href}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  onClick={() =>
+                                    handleDropdownItemClick(dropItem)
+                                  }
+                                  className="block px-3 py-2 text-sm text-gray-400 hover:text-white transition-colors"
+                                >
+                                  {dropItem.label}
+                                </a>
                               );
                             }
                             return (
