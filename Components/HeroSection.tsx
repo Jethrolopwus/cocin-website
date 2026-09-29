@@ -40,84 +40,93 @@ export default function HeroSection() {
     <>
       <section className="w-full">
         {/* Background Carousel Hero */}
-        <div className="relative w-full h-[55vh] min-h-[420px] lg:h-[75vh] lg:min-h-[700px] overflow-hidden">
+        <div className="relative w-full h-[55vh] min-h-[420px] lg:h-[75vh] lg:min-h-[700px] overflow-hidden bg-[#0f172a]">
           {/* Slide images — all stacked, only the active one is visible */}
           {carouselImages.map((image, index) => (
             <div
               key={index}
-              className={`absolute inset-0 transition-opacity duration-1000 ${
-                index === current ? "opacity-100" : "opacity-0"
-              }`}
+              className={`absolute transition-opacity duration-1000 ${index === current ? "opacity-100" : "opacity-0"
+                } inset-0 lg:left-[40%] lg:right-0 lg:top-0 lg:bottom-0`}
             >
-              {/* Mobile: object-cover cropped to top; Desktop: object-contain to show full portrait */}
+              {/* Mobile: full cover; Desktop: constrained to right portion */}
               <Image
                 src={image.src}
                 alt={image.alt}
                 fill
                 priority={index === 0}
-                className="object-cover object-[center_22%] lg:object-cover"
-                sizes="100vw"
+                className="object-cover object-[center_22%] lg:object-[center_15%]"
+                sizes="(min-width: 1024px) 60vw, 100vw"
               />
             </div>
           ))}
 
-          {/* Dark overlay so text is always readable */}
-          <div className="absolute inset-0 bg-black/55" />
+          {/* Overlay: uniform on mobile; gradient on desktop blending image into dark left */}
+          <div className="absolute inset-0 bg-black/55 lg:bg-transparent" />
+          <div
+            className="absolute inset-0 hidden lg:block"
+            style={{
+              background:
+                "linear-gradient(to right, #0f172a 0%, #0f172a 38%, rgba(15,23,42,0.85) 48%, rgba(15,23,42,0.4) 65%, rgba(15,23,42,0.15) 85%, rgba(15,23,42,0.05) 100%)",
+            }}
+          />
 
-          {/* Text content — centred on top of the background */}
-          <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8">
-              <span className="w-2 h-2 rounded-full bg-[#60A5FA]"></span>
-              <span className="text-sm text-white/90 font-medium">
-                Founded 1904 · Over 120 Years of Gospel Impact
-              </span>
-            </div>
+          {/* Text content — centred on mobile, left-aligned on desktop */}
+          <div className="relative z-10 h-full">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col items-center justify-center text-center lg:items-start lg:text-left lg:max-w-7xl pb-16 lg:pb-24">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-16">
+                <span className="w-2 h-2 rounded-full bg-[#60A5FA]"></span>
+                <span className="text-sm text-white/90 font-medium">
+                  Founded 1904 · Over 120 Years of Gospel Impact
+                </span>
+              </div>
 
-            {/* Heading */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
-              Growing disciples.
-              <br />
-              <span className="text-[#60A5FA]">Changing nations.</span>
-            </h1>
+              {/* Heading */}
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8">
+                Growing disciples.
+                <br />
+                <span className="text-[#60A5FA]">Changing nations.</span>
+              </h1>
 
-            {/* Subheading */}
-            <p className="text-lg sm:text-xl text-white/75 mb-10 max-w-lg">
-              3,500+ congregations. 18 global
-              <br />
-              missions. One Lord.
-            </p>
+              {/* Subheading */}
+              <p className="text-lg sm:text-xl text-white/75 mb-10 max-w-lg">
+                3,500+ congregations. 18 global
+                <br />
+                missions. One Lord.
+              </p>
 
-            {/* CTA Buttons */}
-            <div className="flex items-center justify-center gap-4">
-              <button
-                onClick={() => setFindChurchOpen(true)}
-                className="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#1d4ed8] text-white font-semibold px-6 py-3 rounded-full transition-colors text-sm shadow-lg"
-              >
-                <MapPin size={16} />
-                Find a Church
-              </button>
-              <button className="inline-flex items-center gap-2 text-white hover:text-white/80 font-semibold text-sm transition-colors">
-                <Play size={16} />
-                Watch Sermons
-              </button>
+              {/* CTA Buttons */}
+              <div className="flex items-center justify-center lg:justify-start gap-4">
+                <button
+                  onClick={() => setFindChurchOpen(true)}
+                  className="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#1d4ed8] text-white font-semibold px-6 py-3 rounded-full transition-colors text-sm shadow-lg"
+                >
+                  <MapPin size={16} />
+                  Find a Church
+                </button>
+                <button className="inline-flex items-center gap-2 text-white hover:text-white/80 font-semibold text-sm transition-colors">
+                  <Play size={16} />
+                  Watch Sermons
+                </button>
+              </div>
             </div>
           </div>
 
-          {/* Slide indicator dots */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2">
-            {carouselImages.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrent(index)}
-                aria-label={`Go to slide ${index + 1}`}
-                className={`rounded-full transition-all duration-300 ${
-                  index === current
+          {/* Slide indicator dots — aligned with content container */}
+          <div className="absolute bottom-6 z-10 w-full">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center lg:justify-start gap-2">
+              {carouselImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrent(index)}
+                  aria-label={`Go to slide ${index + 1}`}
+                  className={`rounded-full transition-all duration-300 ${index === current
                     ? "w-6 h-2 bg-white"
                     : "w-2 h-2 bg-white/40 hover:bg-white/70"
-                }`}
-              />
-            ))}
+                    }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
 
