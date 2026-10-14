@@ -6,14 +6,8 @@ import { MapPin, Play } from "lucide-react";
 import FindChurchModal from "./FindChurchModal";
 
 const carouselImages = [
-  { src: "/President.png", alt: "COCIN President" },
-  { src: "/GS.png", alt: "COCIN General Secretary" },
-  { src: "/DP.png", alt: "COCIN Leadership" },
-  { src: "/Frame-5.png", alt: "COCIN Community 3" },
-  { src: "/DDP.png", alt: "COCIN Deputy Director" },
-  { src: "/Sylvester_Dachomo.png", alt: "Sylvester Dachomo" },
-  { src: "/DF.png", alt: "COCIN Director of Finance" },
-  { src: "/VP.png", alt: "COCIN Vice President" },
+  { src: "/HQ.jpeg", alt: "COCIN Headquarters" },
+  { src: "/HQ1.jpeg", alt: "COCIN Headquarters" },
 ];
 
 const SLIDE_INTERVAL = 4000; // ms

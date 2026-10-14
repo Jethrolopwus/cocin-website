@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import {
   MapPin,
   Heart,
@@ -8,7 +9,6 @@ import {
   ShieldCheck,
   BookOpen,
   Check,
-  UserCircle,
 } from "lucide-react";
 import FindChurchModal from "@/Components/FindChurchModal";
 import GiveModal from "@/Components/GiveModal";
@@ -26,24 +26,28 @@ const leaders = [
   {
     role: "President",
     name: "Rev. Dr. Amos Mohzo",
+    image: "/President.png",
     description:
       "Spiritual Leader of COCIN Worldwide & Chairman of the General Church Council.",
   },
   {
     role: "Vice President",
     name: "Rev. Assoc. Prof. Benjamin Pokol",
+    image: "/VP.png",
     description:
       "Overseeing Theological Education, Campus Ministries & Discipleship Directorate.",
   },
   {
     role: "General Secretary",
     name: "Rev. Dauda A. Jimra",
+    image: "/GS.png",
     description:
       "Chief Executive Administrator managing Secretariat Headquarters and PCC Coordination.",
   },
   {
     role: "Deputy General Secretary",
-    name: "Rev. Timothy Nwan",
+    name: "Rev. Dr. Sylvester Dachomo",
+    image: "/Sylvester_Dachomo.png",
     description:
       "Operations Coordinator supervising regional field stations and pastoral deployments.",
   },
@@ -100,11 +104,10 @@ export default function AboutPage() {
                 <a
                   key={tab.label}
                   href={tab.href}
-                  className={`flex-shrink-0 px-5 py-2.5 rounded-full text-sm font-medium transition-colors ${
-                    tab.active
+                  className={`flex-shrink-0 px-5 py-2.5 rounded-full text-sm font-medium transition-colors ${tab.active
                       ? "bg-[#2563EB] text-white"
                       : "bg-white text-gray-700 border border-gray-300 hover:bg-gray-50"
-                  }`}
+                    }`}
                 >
                   {tab.label}
                 </a>
@@ -243,8 +246,14 @@ export default function AboutPage() {
                   key={leader.name}
                   className="bg-white rounded-2xl border border-gray-200 p-6"
                 >
-                  <div className="w-12 h-12 bg-[#F5F3EF] rounded-xl flex items-center justify-center mb-4">
-                    <UserCircle size={24} className="text-gray-400" />
+                  <div className="relative w-16 h-16 rounded-full overflow-hidden mb-4 border-2 border-gray-200">
+                    <Image
+                      src={leader.image}
+                      alt={leader.name}
+                      fill
+                      className="object-cover object-top"
+                      sizes="64px"
+                    />
                   </div>
                   <span className="text-[#2563EB] font-semibold text-xs tracking-widest uppercase block mb-1">
                     {leader.role}

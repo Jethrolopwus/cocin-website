@@ -232,6 +232,31 @@ export default function FinanceDepartmentPage() {
                 </div>
               </div>
 
+              {/* Deputy Director Card */}
+              <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
+                <div className="relative w-full" style={{ height: 280 }}>
+                  <Image
+                    src="/DDF.jpeg"
+                    alt="Deputy Director of Finance"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 1024px) 100vw, 350px"
+                  />
+                </div>
+                <div className="p-6">
+                  <span className="text-[#2563EB] font-semibold text-xs tracking-widest uppercase block mb-1">
+                    Deputy Director
+                  </span>
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">
+                    Deputy Director of Finance
+                  </h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">
+                    Supporting the Director in overseeing the financial
+                    operations and accountability of COCIN.
+                  </p>
+                </div>
+              </div>
+
               {/* Leadership Succession */}
               <div className="bg-[#1F2937] rounded-2xl p-6 text-white">
                 <h3 className="text-base font-bold mb-4">
