@@ -175,7 +175,7 @@ export default function PersonnelDepartmentPage() {
               <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
                 <div className="relative w-full" style={{ height: 280 }}>
                   <Image
-                    src="/DP.png"
+                    src="/dp.jpeg"
                     alt="Director of Personnel"
                     fill
                     className="object-cover object-top"
