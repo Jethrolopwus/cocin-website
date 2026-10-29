@@ -15,7 +15,7 @@ const events = [
     title: "105th General Church Council (GCC) Assembly",
     description:
       "The supreme decision-making gathering of delegates, pastors, and church executives from all",
-    location: "COCIN Headquarters Conference Hall, Jos",
+    location: "COCIN Headquarters Church Auditorium, Jos",
     isActive: true,
   },
 ];

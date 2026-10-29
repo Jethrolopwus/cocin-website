@@ -145,7 +145,7 @@ const dropdownData: Record<string, DropdownItem[]> = {
     },
     {
       label: "Publications",
-      description: "The Light Newspaper and quarterly theological journals",
+      description: "The Light Bearer Newspaper and quarterly theological journals",
       href: "https://lightbearernews.com/",
     },
     {
@@ -276,18 +276,25 @@ export default function Header() {
             {/* Left: Phone & Email */}
             <div className="flex items-center gap-3">
               <a
-                href="tel:+2347002624667"
+                href="tel:+2348069215394"
                 className="flex items-center gap-1.5 hover:text-white transition-colors"
               >
                 <Phone size={12} className="flex-shrink-0" />
-                <span className="hidden sm:inline">+234 700 262 4667</span>
+                <span className="hidden sm:inline">08069215394</span>
               </a>
               <a
-                href="mailto:headquarters@cocin.org"
+                href="tel:+2347067512762"
+                className="flex items-center gap-1.5 hover:text-white transition-colors"
+              >
+                <Phone size={12} className="flex-shrink-0" />
+                <span className="hidden sm:inline">07067512762</span>
+              </a>
+              <a
+                href="mailto:cocinheadquarters@gmail.com"
                 className="flex items-center gap-1.5 hover:text-white transition-colors"
               >
                 <Mail size={12} className="flex-shrink-0" />
-                <span className="hidden sm:inline">headquarters@cocin.org</span>
+                <span className="hidden sm:inline">cocinheadquarters@gmail.com</span>
               </a>
             </div>
 

@@ -21,7 +21,7 @@ const sermons = [
     scripture: "2 Corinthians 9:6-11",
     date: "July 05, 2026",
     title: "The Grace of Stewardships and Generosity",
-    speaker: "Rev. Dauda A. Jimra · General Secretary",
+    speaker: "Rev. Dinfa Mamshal · General Secretary",
   },
 ];
 

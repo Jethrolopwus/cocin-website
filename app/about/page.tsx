@@ -39,7 +39,7 @@ const leaders = [
   },
   {
     role: "General Secretary",
-    name: "Rev. Dauda A. Jimra",
+    name: "Rev. Dinfa Mamshal",
     image: "/GS.png",
     description:
       "Chief Executive Administrator managing Secretariat Headquarters and PCC Coordination.",
