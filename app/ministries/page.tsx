@@ -5,9 +5,9 @@ import Image from "next/image";
 
 const categories = [
   "All Ministries",
-  "Youth Ministry",
-  "Women's Fellowship",
-  "Children Ministry",
+  "CYF — COCIN Youth Fellowship",
+  "CWF — COCIN Women's Fellowship",
+  "COCIN Sunday School",
   "Foreign Mission",
   "Chaplaincy Services",
   "Music & Worship",
@@ -16,30 +16,30 @@ const categories = [
 const ministries = [
   {
     image: "/Container6.png",
-    title: "Youth Ministry",
+    title: "CYF — COCIN Youth Fellowship",
     subtitle: "Discipling the Next Generation",
     description:
       "Vibrant fellowship equipping teenagers and young adults with spiritual conviction, academic excellence, and leadership skills.",
     director: "Rev. Emmanuel Pam",
-    category: "Youth Ministry",
+    category: "CYF — COCIN Youth Fellowship",
   },
   {
     image: "/Container5.png",
-    title: "Women's Fellowship",
+    title: "CWF — COCIN Women's Fellowship",
     subtitle: "Pillars of Prayer & Home",
     description:
       "Uniting Christian women in spiritual growth, maternal guidance, skill acquisition, and compassionate widow care.",
     director: "Mrs. Naomi Mohzo",
-    category: "Women's Fellowship",
+    category: "CWF — COCIN Women's Fellowship",
   },
   {
     image: "/Container4.png",
-    title: "Children Ministry",
+    title: "COCIN Sunday School",
     subtitle: "Nurturing Young Hearts",
     description:
       "Child-centered Sunday school programs, VBS, and moral foundation building tailored for ages 3 to 14.",
     director: "Mrs. Grace D. Lar",
-    category: "Children Ministry",
+    category: "COCIN Sunday School",
   },
   {
     image: "/Container3.png",

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -461,10 +462,16 @@ export default function EvangelismMissionPage() {
             <div className="lg:col-span-1 space-y-6">
               {/* Acting Director Card */}
               <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden sticky top-28">
-                <div className="p-6 bg-gradient-to-br from-[#EFF6FF] to-white">
-                  <div className="w-16 h-16 bg-[#2563EB] rounded-2xl flex items-center justify-center mb-4">
-                    <Globe size={28} className="text-white" />
-                  </div>
+                <div className="relative w-full" style={{ height: 300 }}>
+                  <Image
+                    src="/DEM.jpeg"
+                    alt="Rev. Moses S. Gonam — Acting Director of Evangelism and Missions"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 1024px) 100vw, 350px"
+                  />
+                </div>
+                <div className="p-6">
                   <span className="text-[#2563EB] font-semibold text-xs tracking-widest uppercase block mb-1">
                     Acting Director of Evangelism &amp; Missions
                   </span>

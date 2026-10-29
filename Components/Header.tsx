@@ -56,18 +56,18 @@ const dropdownData: Record<string, DropdownItem[]> = {
   ],
   Ministries: [
     {
-      label: "Youth Ministry",
+      label: "CYF — COCIN Youth Fellowship",
       description: "Empowering young disciples for kingdom leadership",
       href: "/ministries",
     },
     {
-      label: "Women Fellowship",
+      label: "CWF — COCIN Women's Fellowship",
       description:
         "Building virtuous, prayerful and community-minded women",
       href: "/ministries",
     },
     {
-      label: "Children Ministry",
+      label: "COCIN Sunday School",
       description:
         "Nurturing the next generation in sound Christian doctrine",
       href: "/ministries",

@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 const ministries = [
   {
     image: "/Container6.png",
-    title: "Youth Ministry",
+    title: "CYF — COCIN Youth Fellowship",
     subtitle: "Discipling the Next Generation",
     description:
       "Vibrant fellowship equipping teenagers and young adults with",
@@ -12,7 +12,7 @@ const ministries = [
   },
   {
     image: "/Container5.png",
-    title: "Women's Fellowship",
+    title: "CWF — COCIN Women's Fellowship",
     subtitle: "Pillars of Prayer & Home",
     description:
       "Uniting Christian women in spiritual growth, maternal guidance, skill",
@@ -20,7 +20,7 @@ const ministries = [
   },
   {
     image: "/Container4.png",
-    title: "Children Ministry",
+    title: "COCIN Sunday School",
     subtitle: "Nurturing Young Hearts",
     description:
       "Child-centered Sunday school programs, VBS, and moral foundation",

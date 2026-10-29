@@ -14,45 +14,12 @@ const events = [
     badge: "Conference",
     badgeBg: "#EFF6FF",
     badgeText: "#2563EB",
-    date: "November 17 - 21, 2026 (08:00 AM Daily)",
+    date: "November 2 - 7, 2026 (08:00 AM Daily)",
     title: "105th General Church Council (GCC) Assembly",
     description:
       "The supreme decision-making gathering of delegates, pastors, and church executives from all PCCs across Nigeria and international missions.",
     location: "COCIN Headquarters Conference Hall, Jos",
     isFeatured: true,
-  },
-  {
-    badge: "Youth",
-    badgeBg: "#D1FAE5",
-    badgeText: "#065F46",
-    date: "August 25 - 30, 2026 (All Day)",
-    title: "National Youth Fellowship Annual Camp",
-    description:
-      "Gathering over 5,000 young believers for intensive Bible exposition, career workshops, worship, and fellowship at the premier youth event.",
-    location: "Karl Kumm University Campus, Vom",
-    isFeatured: false,
-  },
-  {
-    badge: "Women",
-    badgeBg: "#DBEAFE",
-    badgeText: "#1E40AF",
-    date: "September 15 - 19, 2026 (09:00 AM - 04:00 PM)",
-    title: "COCIN Women Fellowship International Convention",
-    description:
-      "A spiritual retreat empowering women in godly family management, entrepreneurship, intercession, and community upliftment.",
-    location: "Jos Township Stadium, Plateau State",
-    isFeatured: false,
-  },
-  {
-    badge: "Summit",
-    badgeBg: "#E5E7EB",
-    badgeText: "#374151",
-    date: "October 06 - 08, 2026 (09:00 AM Daily)",
-    title: "Clergy & Ministers Pastoral Leadership Summit",
-    description:
-      "Refresher training for ordained pastors, chaplains, and mission leaders on contemporary ministry ethics and pastoral care.",
-    location: "Centenary Chapel, Jos Headquarters",
-    isFeatured: false,
   },
 ];
 
@@ -111,7 +78,7 @@ export default function EventsPage() {
                 105th General Church Council (GCC) Assembly
               </h2>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Date: November 17 - 21, 2026 • Venue: Headquarters Secretariat
+                Date: November 2 - 7, 2026 • Venue: Headquarters Secretariat
                 Auditorium, Jos. Gathering all ordained clergy, PCC executives,
                 and lay delegates across Nigeria and international fields.
               </p>
