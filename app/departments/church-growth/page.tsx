@@ -87,7 +87,8 @@ const units = [
   },
   {
     name: "COCIN Women Fellowship (CWF)",
-    coordinator: "Dr. Justina Damap",
+    coordinator: "Dr. Mrs. Justina Damap",
+    coordinatorImage: "/Mrs-Damap.jpeg",
     icon: "heart",
     vision:
       "CWF envisions women growing together in faith, love and service using their God-given gifts and resources to support one another and advance the Gospel, thereby becoming godly examples and agents of positive transformation in the Church and society.",
@@ -109,7 +110,8 @@ const units = [
   },
   {
     name: "COCIN Youth Fellowship",
-    coordinator: "Rev. Pirfa Mamven",
+    coordinator: "Rev. Pirfa Daniel Mamven",
+    coordinatorImage: "/Rev-Pirfa.jpeg",
     icon: "star",
     vision:
       "Youth Fellowship envisages a holistic developing Christian Youth, that is God-fearing, maturing in wisdom and serves as the salt and the light to the world (Matthew 5:13–16).",
@@ -166,8 +168,8 @@ const units = [
 
 const coordinators = [
   { role: "COCIN Choir", name: "Mr. Julfa" },
-  { role: "COCIN Women Fellowship", name: "Dr. Justina Damap" },
-  { role: "COCIN Youth Fellowship", name: "Rev. Pirfa Mamven" },
+  { role: "COCIN Women Fellowship", name: "Dr. Mrs. Justina Damap", image: "/Mrs-Damap.jpeg" },
+  { role: "COCIN Youth Fellowship", name: "Rev. Pirfa Daniel Mamven", image: "/Rev-Pirfa.jpeg" },
   { role: "COCIN Men's Fellowship", name: "Mr. Daniel Lawan" },
   { role: "COCIN Sunday School", name: "Rev. Nathaniel Y. Panmun" },
   { role: "COCIN Prayer and Revival", name: "Rev. Budadi Taki" },
@@ -526,9 +528,21 @@ export default function ChurchGrowthPage() {
                       key={idx}
                       className="bg-[#F5F3EF] rounded-xl p-4 flex items-start gap-3"
                     >
-                      <div className="w-8 h-8 bg-[#EFF6FF] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Users size={14} className="text-[#2563EB]" />
-                      </div>
+                      {c.image ? (
+                        <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 mt-0.5">
+                          <Image
+                            src={c.image}
+                            alt={c.name}
+                            width={40}
+                            height={40}
+                            className="object-cover w-full h-full"
+                          />
+                        </div>
+                      ) : (
+                        <div className="w-8 h-8 bg-[#EFF6FF] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Users size={14} className="text-[#2563EB]" />
+                        </div>
+                      )}
                       <div>
                         <p className="text-gray-500 text-xs">{c.role}</p>
                         <p className="text-gray-900 text-sm font-semibold">

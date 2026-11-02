@@ -15,21 +15,23 @@ const categories = [
 
 const ministries = [
   {
-    image: "/Container6.png",
+    image: "/Rev-Pirfa.jpeg",
+    imagePosition: "center 22%",
     title: "CYF — COCIN Youth Fellowship",
     subtitle: "Discipling the Next Generation",
     description:
       "Vibrant fellowship equipping teenagers and young adults with spiritual conviction, academic excellence, and leadership skills.",
-    director: "Rev. Emmanuel Pam",
+    director: "Rev. Pirfa Daniel Mamven",
     category: "CYF — COCIN Youth Fellowship",
   },
   {
-    image: "/Container5.png",
+    image: "/Mrs-Damap.jpeg",
+    imagePosition: "center 20%",
     title: "CWF — COCIN Women's Fellowship",
     subtitle: "Pillars of Prayer & Home",
     description:
       "Uniting Christian women in spiritual growth, maternal guidance, skill acquisition, and compassionate widow care.",
-    director: "Mrs. Naomi Mohzo",
+    director: "Dr. Mrs. Justina Damap",
     category: "CWF — COCIN Women's Fellowship",
   },
   {
@@ -70,6 +72,37 @@ const ministries = [
   },
 ];
 
+const leaders = [
+  {
+    role: "President",
+    name: "Rev. Dr. Amos Mohzo",
+    image: "/President.png",
+    description:
+      "Spiritual Leader of COCIN Worldwide & Chairman of the General Church Council.",
+  },
+  {
+    role: "Vice President",
+    name: "Rev. Assoc. Prof. Benjamin Pokol",
+    image: "/VP.png",
+    description:
+      "Overseeing Theological Education, Campus Ministries & Discipleship Directorate.",
+  },
+  {
+    role: "General Secretary",
+    name: "Rev. Dinfa Mamshal",
+    image: "/GS.png",
+    description:
+      "Chief Executive Administrator managing Secretariat Headquarters and PCC Coordination.",
+  },
+  {
+    role: "Deputy General Secretary",
+    name: "Rev. Dr. Sylvester Dachomo",
+    image: "/Sylvester_Dachomo.png",
+    description:
+      "Operations Coordinator supervising regional field stations and pastoral deployments.",
+  },
+];
+
 export default function MinistriesPage() {
   const [activeCategory, setActiveCategory] = useState("All Ministries");
 
@@ -105,14 +138,58 @@ export default function MinistriesPage() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`flex-shrink-0 px-5 py-2.5 rounded-full text-sm font-medium transition-colors ${
-                  activeCategory === cat
+                className={`flex-shrink-0 px-5 py-2.5 rounded-full text-sm font-medium transition-colors ${activeCategory === cat
                     ? "bg-[#2563EB] text-white"
                     : "bg-white text-gray-700 border border-gray-300 hover:bg-gray-50"
-                }`}
+                  }`}
               >
                 {cat}
               </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Executive Leadership */}
+      <section className="bg-white py-12 sm:py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span className="text-[#2563EB] font-semibold text-xs tracking-widest uppercase mb-2 block">
+            Leadership
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+            Executive Secretariat & Leadership
+          </h2>
+          <p className="text-gray-500 text-sm mb-8">
+            The General Church Council (GCC) executive officers guiding
+            spiritual and administrative affairs.
+          </p>
+          <hr className="border-gray-200 mb-8" />
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {leaders.map((leader) => (
+              <div
+                key={leader.name}
+                className="bg-white rounded-2xl border border-gray-200 p-6"
+              >
+                <div className="relative w-16 h-16 rounded-full overflow-hidden mb-4 border-2 border-gray-200">
+                  <Image
+                    src={leader.image}
+                    alt={leader.name}
+                    fill
+                    className="object-cover object-top"
+                    sizes="64px"
+                  />
+                </div>
+                <span className="text-[#2563EB] font-semibold text-xs tracking-widest uppercase block mb-1">
+                  {leader.role}
+                </span>
+                <h3 className="text-lg font-bold text-gray-900 mb-1">
+                  {leader.name}
+                </h3>
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  {leader.description}
+                </p>
+              </div>
             ))}
           </div>
         </div>
@@ -144,6 +221,7 @@ export default function MinistriesPage() {
                       alt={ministry.title}
                       fill
                       className="object-cover"
+                      style={ministry.imagePosition ? { objectPosition: ministry.imagePosition } : undefined}
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 295px"
                     />
                   </div>
