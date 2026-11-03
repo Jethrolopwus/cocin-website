@@ -16,7 +16,7 @@ const categories = [
 const ministries = [
   {
     image: "/Rev-Pirfa.jpeg",
-    imagePosition: "center 22%",
+    imagePosition: "center 12%",
     title: "CYF — COCIN Youth Fellowship",
     subtitle: "Discipling the Next Generation",
     description:
@@ -35,21 +35,23 @@ const ministries = [
     category: "CWF — COCIN Women's Fellowship",
   },
   {
-    image: "/Container4.png",
+    image: "/Rev-PJ.jpeg",
+    imagePosition: "center 12%",
     title: "COCIN Sunday School",
     subtitle: "Nurturing Young Hearts",
     description:
       "Child-centered Sunday school programs, VBS, and moral foundation building tailored for ages 3 to 14.",
-    director: "Mrs. Grace D. Lar",
+    director: "Rev Panmun Nathaniel Yohanna",
     category: "COCIN Sunday School",
   },
   {
-    image: "/Container3.png",
+    image: "/DEM.jpeg",
+    imagePosition: "center 12%",
     title: "Foreign Mission",
     subtitle: "To the Ends of the Earth",
     description:
       "Active cross-cultural missionary stations in Niger Republic, Cameroon, Benin, the United Kingdom, and North America.",
-    director: "Rev. Solomon Danfulani",
+    director: "Rev. Moses S. Gonam",
     category: "Foreign Mission",
   },
   {
@@ -139,8 +141,8 @@ export default function MinistriesPage() {
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 className={`flex-shrink-0 px-5 py-2.5 rounded-full text-sm font-medium transition-colors ${activeCategory === cat
-                    ? "bg-[#2563EB] text-white"
-                    : "bg-white text-gray-700 border border-gray-300 hover:bg-gray-50"
+                  ? "bg-[#2563EB] text-white"
+                  : "bg-white text-gray-700 border border-gray-300 hover:bg-gray-50"
                   }`}
               >
                 {cat}
