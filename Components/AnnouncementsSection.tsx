@@ -3,7 +3,7 @@ import { Calendar, Clock, ArrowRight } from "lucide-react";
 
 const articles = [
   {
-    image: "/article1.png",
+    image: "/President.png",
     date: "July 21, 2026",
     readTime: "3 min read",
     title: "COCIN President Delivers New Year Charge to Pastoral Staff in Jos",

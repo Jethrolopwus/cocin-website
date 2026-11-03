@@ -3,21 +3,21 @@ import { Calendar, ArrowRight, Video, Volume2 } from "lucide-react";
 
 const sermons = [
   {
-    image: "/sermon3.png",
+    image: "/HQ.jpeg",
     scripture: "Hebrews 12:26-28",
     date: "July 19, 2026",
     title: "Unwavering Faith in Times of Global Shaking",
     speaker: "Rev. Dr. Amos Mohzo · COCIN President",
   },
   {
-    image: "/sermon2.png",
+    image: "/HQ.jpeg",
     scripture: "Matthew 28:18-20",
     date: "July 12, 2026",
     title: "Raising Disciples with Kingdom Impact",
     speaker: "Rev. Assoc. Prof. Benjamin Pokol · COCIN Vice President",
   },
   {
-    image: "/sermon1.png",
+    image: "/HQ.jpeg",
     scripture: "2 Corinthians 9:6-11",
     date: "July 05, 2026",
     title: "The Grace of Stewardships and Generosity",

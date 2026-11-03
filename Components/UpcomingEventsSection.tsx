@@ -3,7 +3,7 @@ import { Calendar, Clock, MapPin, ArrowRight } from "lucide-react";
 
 const events = [
   {
-    image: "/Frame-2.png",
+    image: "/President.png",
     badge: "GCC National",
     badgeBg: "#E8D44D",
     badgeText: "#1a1a1a",

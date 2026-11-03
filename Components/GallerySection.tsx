@@ -26,7 +26,7 @@ export default function GallerySection() {
             style={{ borderRadius: 18, height: 515 }}
           >
             <Image
-              src="/gallery3.png"
+              src="/HQ.jpeg"
               alt="Worship at COCIN"
               fill
               className="object-cover"
@@ -40,7 +40,7 @@ export default function GallerySection() {
             style={{ borderRadius: 18, height: 515 }}
           >
             <Image
-              src="/sermon3.png"
+              src="/HQ1.jpeg"
               alt="COCIN Conference Hall"
               fill
               className="object-cover object-top"
@@ -54,7 +54,7 @@ export default function GallerySection() {
             style={{ borderRadius: 18, height: 337 }}
           >
             <Image
-              src="/Container.png"
+              src="/HQ.jpeg"
               alt="Music & Worship"
               fill
               className="object-cover"
@@ -67,7 +67,7 @@ export default function GallerySection() {
             style={{ borderRadius: 18, height: 337 }}
           >
             <Image
-              src="/gallery4.png"
+              src="/HQ1.jpeg"
               alt="Community Fellowship"
               fill
               className="object-cover"
@@ -80,7 +80,7 @@ export default function GallerySection() {
             style={{ borderRadius: 18, height: 337 }}
           >
             <Image
-              src="/gallery1.png"
+              src="/HQ.jpeg"
               alt="COCIN Building"
               fill
               className="object-cover"
@@ -94,7 +94,7 @@ export default function GallerySection() {
             style={{ borderRadius: 18, height: 337 }}
           >
             <Image
-              src="/gallery2.png"
+              src="/HQ1.jpeg"
               alt="COCIN Architecture"
               fill
               className="object-cover"

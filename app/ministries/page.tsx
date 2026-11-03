@@ -55,12 +55,13 @@ const ministries = [
     category: "Foreign Mission",
   },
   {
-    image: "/Container2.png",
+    image: "/Rev-cocinhq.jpeg",
+    imagePosition: "center 12%",
     title: "Chaplaincy Services",
     subtitle: "Salt & Light Beyond Church Walls",
     description:
       "Providing spiritual counsel in hospitals, prisons, security agencies, universities, and secondary schools nationwide.",
-    director: "Rev. Chap. Markus Gyang",
+    director: "Rev Assoc Prof Caleb Dami",
     category: "Chaplaincy Services",
   },
   {

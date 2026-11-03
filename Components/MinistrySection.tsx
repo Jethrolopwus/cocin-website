@@ -3,52 +3,64 @@ import { ArrowRight } from "lucide-react";
 
 const ministries = [
   {
-    image: "/Container6.png",
+    image: "/Rev-Pirfa.jpeg",
+    imagePosition: "center 12%",
     title: "CYF — COCIN Youth Fellowship",
     subtitle: "Discipling the Next Generation",
     description:
-      "Vibrant fellowship equipping teenagers and young adults with",
-    director: "Dir: Rev. Emmanuel Pam",
+      "Vibrant fellowship equipping teenagers and young adults with spiritual conviction, academic excellence, and leadership skills.",
+    director: "Dir: Rev. Pirfa Daniel Mamven",
+    category: "CYF — COCIN Youth Fellowship",
   },
   {
-    image: "/Container5.png",
+    image: "/Mrs-Damap.jpeg",
+    imagePosition: "center 20%",
     title: "CWF — COCIN Women's Fellowship",
     subtitle: "Pillars of Prayer & Home",
     description:
-      "Uniting Christian women in spiritual growth, maternal guidance, skill",
-    director: "Dir: Mrs. Naomi Mohzo",
+      "Uniting Christian women in spiritual growth, maternal guidance, skill acquisition, and compassionate widow care.",
+    director: "Dir: Dr. Mrs. Justina Damap",
+    category: "CWF — COCIN Women's Fellowship",
   },
   {
-    image: "/Container4.png",
+    image: "/Rev-PJ.jpeg",
+    imagePosition: "center 12%",
     title: "COCIN Sunday School",
     subtitle: "Nurturing Young Hearts",
     description:
-      "Child-centered Sunday school programs, VBS, and moral foundation",
-    director: "Dir: Mrs. Grace D. Lar",
+      "Child-centered Sunday school programs, VBS, and moral foundation building tailored for ages 3 to 14.",
+    director: "Dir: Rev Panmun Nathaniel Yohanna",
+    category: "COCIN Sunday School",
   },
   {
-    image: "/Container3.png",
+    image: "/DEM.jpeg",
+    imagePosition: "center 12%",
     title: "Foreign Mission",
     subtitle: "To the Ends of the Earth",
     description:
-      "Active cross-cultural missionary stations in Niger Republic, Cameroon,",
-    director: "Dir: Rev. Solomon Danfulani",
+      "Active cross-cultural missionary stations in Niger Republic, Cameroon, Benin, the United Kingdom, and North America.",
+    director: "Dir: Rev. Moses S. Gonam",
+    category: "Foreign Mission",
   },
   {
-    image: "/Container2.png",
+    image: "/Rev-cocinhq.jpeg",
+    imagePosition: "center 25%",
     title: "Chaplaincy Services",
     subtitle: "Salt & Light Beyond Church Walls",
     description:
       "Providing spiritual counsel in hospitals, prisons, security agencies,",
-    director: "Dir: Rev. Chap. Markus Gyang",
+    director: "Dir: Rev Assoc Prof Caleb Dami",
+    category: "Chaplaincy Services",
   },
   {
     image: "/Container.png",
+    imagePosition: "center 50%",
     title: "Music & Worship Ministry",
     subtitle: "Exalting the Holy One",
     description:
       "Harmonious choir networks, indigenous brass bands, and",
     director: "Dir: Evang. Luka Mangwat",
+    category: "Music & Worship Ministry",
   },
 ];
 
@@ -91,6 +103,7 @@ export default function MinistrySection() {
                   alt={ministry.title}
                   fill
                   className="object-cover"
+                  style={{ objectPosition: ministry.imagePosition }}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 295px"
                 />
               </div>
