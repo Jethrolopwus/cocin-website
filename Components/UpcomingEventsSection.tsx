@@ -12,7 +12,7 @@ const events = [
     categoryText: "#2563EB",
     date: "November 2 - 7, 2026",
     time: "08:00 AM Daily",
-    title: "105th General Church Council (GCC) Assembly",
+    title: "110th General Church Council (GCC) Assembly",
     description:
       "The supreme decision-making gathering of delegates, pastors, and church executives from all",
     location: "COCIN Headquarters Church Auditorium, Jos",
