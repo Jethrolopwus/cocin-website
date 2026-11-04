@@ -4,6 +4,7 @@ import { Calendar, Clock, ArrowRight } from "lucide-react";
 const articles = [
   {
     image: "/President.png",
+    imagePosition: "center 25%",
     date: "July 21, 2026",
     readTime: "3 min read",
     title: "COCIN President Delivers New Year Charge to Pastoral Staff in Jos",
@@ -73,6 +74,7 @@ export default function AnnouncementsSection() {
                   alt={article.title}
                   fill
                   className="object-cover"
+                  style={{ objectPosition: article.imagePosition ?? "center" }}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 295px"
                 />
               </div>

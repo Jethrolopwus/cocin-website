@@ -51,17 +51,25 @@ export default function ContactPage() {
                   </div>
 
                   {/* Phone */}
-                  <div className="flex items-center gap-3 mb-5">
+                  <div className="flex items-start gap-3 mb-5">
                     <Phone
                       size={18}
-                      className="text-[#2563EB] flex-shrink-0"
+                      className="text-[#2563EB] flex-shrink-0 mt-0.5"
                     />
-                    <a
-                      href="tel:+2347002624667"
-                      className="text-gray-300 hover:text-white text-sm transition-colors"
-                    >
-                      +234 700 262 4667
-                    </a>
+                    <div className="flex flex-col gap-1">
+                      <a
+                        href="tel:+2348069215394"
+                        className="text-gray-300 hover:text-white text-sm transition-colors"
+                      >
+                        08069215394
+                      </a>
+                      <a
+                        href="tel:+2347067512762"
+                        className="text-gray-300 hover:text-white text-sm transition-colors"
+                      >
+                        07067512762
+                      </a>
+                    </div>
                   </div>
 
                   {/* Email */}
@@ -71,10 +79,10 @@ export default function ContactPage() {
                       className="text-[#2563EB] flex-shrink-0"
                     />
                     <a
-                      href="mailto:headquarters@cocin.org"
+                      href="mailto:cocinheadquarters@gmail.com"
                       className="text-gray-300 hover:text-white text-sm transition-colors"
                     >
-                      headquarters@cocin.org
+                      cocinheadquarters@gmail.com
                     </a>
                   </div>
                 </div>
